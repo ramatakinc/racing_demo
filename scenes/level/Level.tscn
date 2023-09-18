@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://gridmaps/city.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://scenes/level/decoration/buildings/skyscraperA.glb" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://scenes/level/decoration/buildings/small_buildingD.glb" type="PackedScene" id=21]
 [ext_resource path="res://scenes/level/decoration/buildings/small_buildingB.glb" type="PackedScene" id=22]
 [ext_resource path="res://scenes/level/decoration/foliage/grass.material" type="Material" id=23]
+[ext_resource path="res://utils/multimesh_collisions.gd" type="Script" id=24]
 
 [sub_resource type="PlaneMesh" id=2]
 size = Vector2( 2000, 2000 )
@@ -139,10 +140,12 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -13.4403, 0, -0.989106 )
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79492, 0, 15.8324 )
 multimesh = SubResource( 7 )
+script = ExtResource( 24 )
 
 [node name="MultiMeshInstance2" type="MultiMeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79492, 0, 15.8324 )
 multimesh = SubResource( 8 )
+script = ExtResource( 24 )
 
 [node name="Parklet" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4544, 0, 43.1703 )
